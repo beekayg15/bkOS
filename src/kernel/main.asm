@@ -22,7 +22,7 @@ puts:
     jz .done
 
     mov ah, 0x0e    ; call bios interrupt
-    mov bh, 0
+    mov bh, 0       ; sets the display page number to 0 (the default visible page)
     int 0x10
 
     jmp .loop
